@@ -19,6 +19,29 @@ app.post("/api/contact", (req, res) => {
   res.status(200).json({ msg: "Form submitted successfully" });
 });
 
+const portfolioItems = [
+  {
+    id: 1,
+    title: "Personal Portfolio Website",
+    description: "A personal website to showcase my projects and skills.",
+    image: "portfolio1.jpg",
+    url: "https://github.com/MrWais001/My_Portfolio",
+  },
+  {
+    id: 2,
+    title: "Task Management CLI",
+    description:
+      "A command-line interface to manage tasks with a JSON file backend.",
+    image: "portfolio2.jpg",
+    url: "https://github.com/MrWais001/Task_CLI",
+  },
+];
+
+// Portfolio API endpoint
+app.get("/api/portfolio", (req, res) => {
+  res.json(portfolioItems);
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
