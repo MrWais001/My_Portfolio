@@ -1,11 +1,11 @@
 // src/components/Home.js
 import React from "react";
+import WelcomeHero from "./WelcomeHero";
 
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is the home page where I showcase my work and projects.</p>
+      <WelcomeHero />
     </div>
   );
 };

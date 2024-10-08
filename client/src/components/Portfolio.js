@@ -14,20 +14,41 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div>
-      <h1>My Portfolio</h1>
-      <div className="portfolio-container">
-        {projects.map((project) => (
-          <div key={project.id} className="portfolio-item">
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <a href={project.url} target="_blank" rel="noopener noreferrer">
-              <img src={`/images/${project.image}`} alt={project.title} />
-            </a>
+    <section id="portfolio" className="portfolio">
+      <div className="portfolio-details">
+        <div className="section-heading text-center">
+          <h2>Portfolio</h2>
+        </div>
+        <div className="container">
+          <div className="portfolio-content">
+            <div className="isotope">
+              <div className="row">
+                {projects.map((project) => (
+                  <div className="col-sm-4" key={project.id}>
+                    <div className="item">
+                      <img
+                        src={`/images/${project.image}`} // Adjust the path as necessary
+                        alt={project.title}
+                      />
+                      <div className="isotope-overlay">
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {project.category}{" "}
+                          {/* Assuming you have a category field */}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
