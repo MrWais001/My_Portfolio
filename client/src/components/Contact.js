@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import "font-awesome/css/font-awesome.css";
 
 const Contact = () => {
+  // State for form fields
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {
+      name,
+      email,
+      subject,
+      message,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Your message has been sent!");
+        // Reset form fields
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        alert("There was an error sending your message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -18,7 +58,7 @@ const Contact = () => {
             <div className="col-md-6">
               <div className="single-contact-box">
                 <div className="contact-form">
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-sm-6 col-xs-12">
                         <div className="form-group">
@@ -26,6 +66,9 @@ const Contact = () => {
                             type="text"
                             className="form-control"
                             placeholder="Name*"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
                           />
                         </div>
                       </div>
@@ -35,6 +78,9 @@ const Contact = () => {
                             type="email"
                             className="form-control"
                             placeholder="Email*"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
                           />
                         </div>
                       </div>
@@ -46,6 +92,8 @@ const Contact = () => {
                             type="text"
                             className="form-control"
                             placeholder="Subject"
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
                           />
                         </div>
                       </div>
@@ -57,6 +105,9 @@ const Contact = () => {
                             className="form-control"
                             rows="8"
                             placeholder="Message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            required
                           ></textarea>
                         </div>
                       </div>
@@ -80,21 +131,21 @@ const Contact = () => {
               <div className="single-contact-box">
                 <div className="contact-address">
                   <div className="contact-add-head">
-                    <h3>Browny Star</h3>
-                    <p>UI/UX Designer</p>
+                    <h3>OlaTech_Solutions</h3>
+                    <p>Fullstack Developer</p>
                   </div>
                   <div className="contact-add-info">
                     <div className="single-contact-add-info">
                       <h3>Phone</h3>
-                      <p>987-123-6547</p>
+                      <p>+2347045234431</p>
                     </div>
                     <div className="single-contact-add-info">
                       <h3>Email</h3>
-                      <p>browny@info.com</p>
+                      <p>abdulgafarridwan@gmail.com</p>
                     </div>
                     <div className="single-contact-add-info">
                       <h3>Website</h3>
-                      <p>www.brownsine.com</p>
+                      <p>www.OlaTech_Solutions.com</p>
                     </div>
                   </div>
                 </div>
@@ -106,7 +157,7 @@ const Contact = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:youremail@gmail.com">
+                      <a href="mailto:abdulgafarridwan@gmail.com">
                         <i className="fa fa-envelope"></i>
                       </a>
                     </li>

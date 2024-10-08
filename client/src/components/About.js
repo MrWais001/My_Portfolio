@@ -62,26 +62,6 @@ const About = () => {
                     </ul>
                   </div>
                 </p>
-                <div className="row">
-                  <div className="col-sm-4">
-                    <div className="single-about-add-info">
-                      <h3>Phone</h3>
-                      <p>+2347045234431</p>
-                    </div>
-                  </div>
-                  <div className="col-sm-4">
-                    <div className="single-about-add-info">
-                      <h3>Email</h3>
-                      <p>abdulgafarridwan@gmail.com</p>
-                    </div>
-                  </div>
-                  <div className="col-sm-4">
-                    <div className="single-about-add-info">
-                      <h3>Website</h3>
-                      <p>www.OlaTech_Solutions.com</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="col-sm-offset-1 col-sm-5">
