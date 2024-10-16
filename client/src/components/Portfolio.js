@@ -27,8 +27,8 @@ const Portfolio = () => {
                   <div className="col-sm-4" key={project.id}>
                     <div className="item">
                       <img
-                        src={`/images/${project.image}`} // Adjust the path as necessary
-                        alt={project.title}
+                        src="/images/portfolio1.avif"
+                        alt="Portfolio Image 1"
                       />
                       <div className="isotope-overlay">
                         <a

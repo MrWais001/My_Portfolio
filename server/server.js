@@ -69,6 +69,15 @@ const portfolioItems = [
     image: "portfolio2.jpg",
     url: "https://github.com/MrWais001/Task_CLI",
   },
+
+  {
+    id: 3,
+    title: "My-cardiology-app",
+    description:
+      "A website to ease communication between patient and cardiology.",
+    image: "portfolio2.jpg",
+    url: "https://github.com/MrWais001/My-cardiology-app.git",
+  },
 ];
 
 // Portfolio API endpoint

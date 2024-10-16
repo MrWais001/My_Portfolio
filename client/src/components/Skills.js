@@ -29,7 +29,7 @@ const Skills = () => {
                 </div>
 
                 <div className="barWrapper">
-                  <span className="progressText">Adobe Illustrator</span>
+                  <span className="progressText">AI Integration</span>
                   <div className="single-progress-txt">
                     <div className="progress">
                       <div

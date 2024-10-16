@@ -70,28 +70,23 @@ const About = () => {
                 <div className="about-list-icon">
                   <ul>
                     <li>
-                      <a href="#">
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
+                      <a href="https://web.facebook.com/abdul.ridwan.7731">
+                        <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:youremail@gmail.com">
+                      <a href="mailto:abdulgafarridwan@gmail.com">
                         <i className="fa fa-envelope"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                      <a href="https://x.com/infnty00">
+                        <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fa fa-instagram" aria-hidden="true"></i>
+                      <a href="https://www.linkedin.com/in/abdulgafar-ridwan-005199188/">
+                        <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
                   </ul>

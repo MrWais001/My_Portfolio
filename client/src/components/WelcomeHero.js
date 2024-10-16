@@ -11,8 +11,8 @@ const WelcomeHero = ({ name, profession, resumeLink }) => {
                 Hi <span>,</span> I am <br /> {name}. <br />
               </h2>
               <p>{profession}</p>
-              <a href={resumeLink} download aria-label="Download my resume">
-                Download Resume
+              <a href="/resume.pdf" download="resume.pdf">
+                <button className="download-btn">Download Resume</button>
               </a>
             </div>
           </div>
